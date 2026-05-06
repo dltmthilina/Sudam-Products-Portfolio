@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Temp / large assets (replace with real ones before pushing)
+# *.jpg
+# *.png
