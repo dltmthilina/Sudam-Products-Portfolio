@@ -568,6 +568,89 @@
   .trust-item-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 3px; }
   .trust-item-desc { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.4; }
 
+  /* ── GMP CERT SECTION ── */
+  .gmp-section {
+    background: linear-gradient(135deg, #f0faf0 0%, #fffbf0 60%, #fff8ee 100%);
+    border-radius: 32px;
+    margin: 0 2vw;
+  }
+  .gmp-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+  }
+  .gmp-photo-wrap {
+    position: relative;
+  }
+  .gmp-photo-frame {
+    border-radius: 24px; overflow: hidden;
+    border: 3px solid #2E7D32;
+    box-shadow: 0 20px 60px rgba(46,125,50,.18);
+    position: relative;
+  }
+  .gmp-photo-frame img {
+    width: 100%; display: block;
+  }
+  .gmp-photo-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.72));
+    color: #fff; padding: 28px 20px 18px;
+    font-size: 13px; font-weight: 500; line-height: 1.5;
+    text-align: center;
+  }
+  .gmp-ribbon {
+    position: absolute; top: -14px; right: -14px;
+    background: var(--yellow); color: var(--dark);
+    border-radius: 50%; width: 78px; height: 78px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 800; letter-spacing: .05em;
+    text-align: center; line-height: 1.3;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    text-transform: uppercase;
+  }
+  .gmp-ribbon span { font-size: 18px; font-weight: 900; display: block; }
+  .gmp-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #e8f5e9; color: #1b5e20;
+    font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 50px;
+    border: 1.5px solid #a5d6a7;
+    margin-bottom: 18px;
+  }
+  .gmp-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .gmp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 900; color: var(--dark); line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .gmp-title em { font-style: normal; color: #2E7D32; }
+  .gmp-desc {
+    font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 28px;
+  }
+  .gmp-points { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
+  .gmp-point { display: flex; align-items: flex-start; gap: 12px; }
+  .gmp-point-icon {
+    width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
+    background: #e8f5e9; display: flex; align-items: center; justify-content: center; font-size: 1rem;
+  }
+  .gmp-point-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+  .gmp-point-text strong { color: var(--dark); display: block; margin-bottom: 2px; }
+  .gmp-issuer {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff; border: 1.5px solid #c8e6c9;
+    border-radius: 14px; padding: 14px 18px;
+  }
+  .gmp-issuer-icon { font-size: 1.6rem; }
+  .gmp-issuer-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+  .gmp-issuer-val { font-size: 14px; font-weight: 700; color: var(--dark); }
+
+  @media (max-width: 768px) {
+    .gmp-grid { grid-template-columns: 1fr; gap: 36px; }
+    .gmp-ribbon { width: 62px; height: 62px; top: -10px; right: -10px; }
+    .gmp-ribbon span { font-size: 14px; }
+  }
+
   /* ── WHY CHOOSE ── */
   .why-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
@@ -679,6 +762,7 @@
     <li><a href="#collections">Collections</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#certification">GMP Certified</a></li>
     <li><a href="#contact">Wholesale Inquiry</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get in Touch</a>
@@ -763,10 +847,10 @@
       </div>
     </div>
     <div class="trust-item">
-      <div class="trust-icon">✨</div>
+      <div class="trust-icon">🏅</div>
       <div>
-        <div class="trust-item-title">Registered &amp; Certified</div>
-        <div class="trust-item-desc">Reg. No. PV00250697 — food safety compliant</div>
+        <div class="trust-item-title">GMP Certified</div>
+        <div class="trust-item-desc">Good Manufacturing Practice certified — Dec 2025</div>
       </div>
     </div>
   </div>
@@ -824,11 +908,62 @@
           </div>
         </div>
         <div class="feature">
-          <div class="feature-icon">✅</div>
+          <div class="feature-icon">🏅</div>
           <div>
-            <div class="feature-title">Registered &amp; Certified</div>
-            <div class="feature-desc">Reg. No. PV00250697 — compliant with Sri Lanka food safety standards.</div>
+            <div class="feature-title">GMP Certified (2025)</div>
+            <div class="feature-desc">Officially awarded Good Manufacturing Practice certification — the gold standard for food safety.</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GMP CERTIFICATION -->
+<section id="certification" class="gmp-section">
+  <div class="gmp-grid">
+    <div class="gmp-photo-wrap">
+      <div class="gmp-photo-frame">
+        <img src="10.jpg" alt="GMP Certificate Awarding Ceremony — Sudham Food Products (Pvt) Ltd, December 30, 2025">
+        <div class="gmp-photo-caption">GMP Certificate Awarding Ceremony · December 30, 2025<br>Issued by the Ministry of Labour &amp; Foreign Employment, Sri Lanka</div>
+      </div>
+      <div class="gmp-ribbon"><span>GMP</span>Certified</div>
+    </div>
+    <div class="gmp-text">
+      <div class="gmp-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Official GMP Certification · 2025
+      </div>
+      <h2 class="gmp-title">Certified for <em>Good Manufacturing Practice</em></h2>
+      <p class="gmp-desc">Sudham Food Products has been officially awarded the <strong>Good Manufacturing Practice (GMP) Certification</strong> — the internationally recognised standard that guarantees every product you buy is manufactured under the strictest hygiene, safety, and quality controls.</p>
+      <div class="gmp-points">
+        <div class="gmp-point">
+          <div class="gmp-point-icon">🏭</div>
+          <div class="gmp-point-text">
+            <strong>Hygienic Production Facility</strong>
+            Our facility meets all GMP standards for cleanliness, equipment, and staff practices.
+          </div>
+        </div>
+        <div class="gmp-point">
+          <div class="gmp-point-icon">🔬</div>
+          <div class="gmp-point-text">
+            <strong>Strict Quality Controls</strong>
+            Every batch is monitored from raw ingredient sourcing to final packaging.
+          </div>
+        </div>
+        <div class="gmp-point">
+          <div class="gmp-point-icon">📋</div>
+          <div class="gmp-point-text">
+            <strong>Fully Traceable Processes</strong>
+            Documented production processes ensuring full accountability and food safety compliance.
+          </div>
+        </div>
+      </div>
+      <div class="gmp-issuer">
+        <div class="gmp-issuer-icon">🏛️</div>
+        <div>
+          <div class="gmp-issuer-lbl">Awarded by</div>
+          <div class="gmp-issuer-val">Ministry of Labour &amp; Foreign Employment, Sri Lanka</div>
         </div>
       </div>
     </div>
@@ -960,6 +1095,7 @@
         <li><a href="#collections">Collections</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About Us</a></li>
+        <li><a href="#certification">GMP Certification</a></li>
         <li><a href="#contact">Wholesale Inquiry</a></li>
       </ul>
     </div>
